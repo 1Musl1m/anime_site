@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="py-10 sm:py-5">
         <div v-if="loading" class="flex items-center justify-center">
             <span class="loading loading-dots loading-lg"></span>
         </div>

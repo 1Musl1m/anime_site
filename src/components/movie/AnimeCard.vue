@@ -13,12 +13,12 @@ defineProps<{
 </script>
 
 <template>
-    <div class="card bg-base-100 w-52 shadow-xl hover:scale-105 duration-200">
+    <div class="card bg-base-100 w-52 sm:w-36 shadow-xl hover:scale-105 duration-200">
         <figure>
             <img
                 :src="'https://shikimori.one' + anime.image.original"
                 :alt="anime.russian"
-                class="w-full h-80"
+                class="w-full h-80 sm:h-64 sm:w-36"
             />
         </figure>
         <div class="card-body p-2 justify-between">
@@ -56,7 +56,7 @@ defineProps<{
                     </svg>
                 </div>
                 <router-link to="/"
-                    ><button class="btn btn-outline">
+                    ><button class="btn btn-outline sm:btn-sm">
                         Подробнее
                     </button></router-link
                 >

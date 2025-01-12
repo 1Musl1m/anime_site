@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { FeTv, BsChat, LaUserFriendsSolid, BxUserCircle, PhNewspaper, FlVideoClip, HiUserGroup } from "@kalimahapps/vue-icons";
+import {
+    FeTv,
+    BsChat,
+    LaUserFriendsSolid,
+    BxUserCircle,
+    PhNewspaper,
+    FlVideoClip,
+    HiUserGroup,
+} from "@kalimahapps/vue-icons";
 import { ref } from "vue";
 
 const items = ref([
@@ -66,7 +74,7 @@ const items = ref([
                 </label>
             </div>
 
-            <div class="drawer-side">
+            <div class="drawer-side z-10">
                 <label
                     for="my-drawer-4"
                     aria-label="close sidebar"
@@ -77,7 +85,7 @@ const items = ref([
                 >
                     <li v-for="item in items" :key="item.id">
                         <div>
-                            <component :is="item.icon" />
+                            <component :is="item.icon" class="w-5 h-5"/>
                             <span>{{ item.name }}</span>
                         </div>
                     </li>
