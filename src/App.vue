@@ -1,6 +1,6 @@
 <template>
   <AppHeader />
-  <div class="px-20 md:p-16 sm:px-6 sm:py-0">
+  <div>
     <RouterView/>
   </div>
   <AppFooter />

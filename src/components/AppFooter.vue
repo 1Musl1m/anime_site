@@ -2,7 +2,7 @@
     <div class="divider m-0"></div>
     <footer>
         <div
-            class="w-full m-4 sm:m-1 mx-auto max-w-screen-xl p-4 sm:p-1 md:flex md:items-center md:justify-between"
+            class="w-full flex items-center justify-between flex-wrap m-4 sm:m-1 mx-auto max-w-screen-xl p-4 sm:p-1"
         >
             <span class="text-sm sm:text-center"
                 >© 2024 <a href="/" class="hover:underline">Ashanti</a>. All

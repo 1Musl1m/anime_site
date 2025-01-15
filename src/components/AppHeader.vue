@@ -6,7 +6,7 @@ import Drawer from './themes/Drawer.vue';
 <template>
     <nav>
         <div
-            class="flex items-center justify-between pt-2 px-20 sm:px-5 "
+            class="flex items-center justify-between pt-2 px-20 sm:px-5 md:px-7"
         >
             <RouterLink
                 to="/"

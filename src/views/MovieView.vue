@@ -1,32 +1,24 @@
-<template>
-    <div class="py-10 sm:py-5">
-        <div v-if="loading" class="flex items-center justify-center">
-            <span class="loading loading-dots loading-lg"></span>
-        </div>
-
-        <div v-else class="flex flex-wrap gap-3">
-            <AnimeCard v-for="anime in animes" :key="anime.id" :anime="anime" />
-        </div>
-
-        <Pagination :page="page" :prevPage="prevPage" :nextPage="nextPage" />
-    </div>
-</template>
-
 <script setup lang="ts">
 import axios from "axios";
-import { ref, watch } from "vue";
+import { provide, ref, watch } from "vue";
 import AnimeCard from "@/components/movie/AnimeCard.vue";
-import Pagination from "@/components/themes/Pagination.vue";
+import Filter from "@/components/movie/Filter.vue";
 
 const page = ref<number>(1);
 const animes = ref<any>([]);
 const loading = ref<boolean>(false);
 
+const name = ref<string>('')
+
+provide('name', name)
+
+console.log(name.value)
+
 const fetchAnimes = async (page: number): Promise<void> => {
     loading.value = true;
     try {
         const response = await axios.get(
-            `https://shikimori.one/api/animes/?page=${page}&limit=24`
+            `https://shikimori.one/api/animes/?page=${page}&limit=25`
         );
         animes.value = response.data;
     } catch (error) {
@@ -40,15 +32,29 @@ watch(page, (newPage) => {
     fetchAnimes(newPage);
 });
 
-const nextPage = (): void => {
-    page.value++;
-};
-
-const prevPage = (): void => {
-    if (page.value > 1) {
-        page.value--;
-    }
-};
-
 fetchAnimes(page.value);
 </script>
+
+
+<template>
+    <div class="p-10 sm:px-5 md:px-7 sm:py-5">
+        <div v-if="loading" class="flex items-center justify-center">
+            <span class="loading loading-dots loading-lg"></span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-8">
+            <div>
+                <Filter />
+            </div>
+            <div class="col-span-3">
+                <div class="grid grid-cols-5 gap-3">
+                    <AnimeCard
+                        v-for="anime in animes"
+                        :key="anime.id"
+                        :anime="anime"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
