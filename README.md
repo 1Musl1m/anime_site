@@ -1,6 +1,6 @@
 # vite-project
 
-This version 2
+This project is amazing.
 
 This template should help get you started developing with Vue 3 in Vite.
 
