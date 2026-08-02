@@ -1,3 +1,12 @@
+<script setup lang="ts">
+// const numbers= [1, 2, 3, 4, 5, 4, 3, 2, 10];
+// const newNumber = [...new Set(numbers)];
+// const sum = newNumber.reduce((acc, el) => (el > 4 ? acc + 1 : acc), 0)
+// const filter = newNumber.filter(number => number % 2 === 0)
+// console.log(filter);
+// console.log(sum);
+</script>
+
 <template>
     <main class="p-20 md:p-7 sm:px-6 sm:py-0">
         <div class="flex items-start justify-between">

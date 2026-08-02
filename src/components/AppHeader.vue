@@ -15,7 +15,7 @@ import Drawer from './themes/Drawer.vue';
                 <img src="/logo.svg" class="w-7 h-7" />
                 <span
                     class="self-center text-2xl sm:text-xl font-semibold whitespace-nowrap hover:text-red-600 active:text-red-900 transition-colors"
-                    >Ashanti</span
+                    >Ashanti!</span
                 >
             </RouterLink>
             <div class="sm:hidden">

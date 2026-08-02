@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-    <div class="card bg-base-100 w-52 sm:w-36 shadow-xl hover:scale-105 duration-200">
+    <div class="card bg-base-100 w-52 sm:w-36 shadow-xl hover:scale-105 duration-200 mb-3">
         <figure>
             <img
                 :src="'https://shikimori.one' + anime.image.original"

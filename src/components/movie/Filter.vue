@@ -1,15 +1,5 @@
 <script setup lang="ts">
 import { BxMoviePlay } from "@kalimahapps/vue-icons";
-import { inject, ref, watch } from "vue";
-
-const inputData = inject('inputData')
-const inputValue = ref('')
-
-watch(inputValue, (newValue) => {
-  if (inputData) {
-    inputData.value = newValue
-  }
-})
 </script>
 
 <template>
@@ -29,7 +19,6 @@ watch(inputValue, (newValue) => {
                         </div>
                         <input
                             type="text"
-                            v-model="inputValue"
                             class="border border-gray-600 rounded-lg block w-full ps-10 p-2 hover:border-gray-500 transition-colors duration-200"
                             placeholder="Поиск по названию"
                         />
